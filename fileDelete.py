@@ -15,9 +15,7 @@ def deleteFileWithPath(path):
         os.system(strig)
 
 # 删除指定文件夹下带特殊后缀的文件
-
 '''
-
 path    文件夹路径，比如：“C:\\test”
 suffix  后缀名,如.doc .mp3 .exe
 eg:     deleteFileInPathAndSuffix("C:\\test", ".txt")   
