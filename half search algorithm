@@ -8,7 +8,8 @@ def bin_search(data_list, val):
     high = len(data_list) - 1       # 最大数下标
     
     while low <= high:        
-        mid = (low + high) // 2     # 中间数下标        
+        mid = (low + high) // 2     # 中间数下标   
+        
         if data_list[mid] == val:   # 如果中间数下标等于val, 返回            
             return mid        
         elif data_list[mid] > val:  # 如果val在中间数左边, 移动high下标            
