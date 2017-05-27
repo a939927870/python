@@ -1,0 +1,14 @@
+import os
+
+#判断文件是否大于1M
+size = os.path.getsize("C:\\123.bmp")
+last = size / (1024 * 1024)
+
+if last > 1:
+    print ("大于1M")
+    print (last)
+else:
+    print ("小于1M")
+    print ("文件大小为: %f M" % (last))
+    
+    
