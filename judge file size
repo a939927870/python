@@ -6,9 +6,9 @@ last = size / (1024 * 1024)
 
 if last > 1:
     print ("大于1M")
-    print (last)
 else:
     print ("小于1M")
-    print ("文件大小为: %f M" % (last))
+
+print ("文件大小为: %f M" % (last))
     
     
