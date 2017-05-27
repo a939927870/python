@@ -4,12 +4,10 @@ import os
 import platform
 
 # 删除文件
-
 def deleteFileWithPath(path):
     sysstr = platform.system()
     print ("当前系统是： " + sysstr)
 #对操作系统进行判断
-
     if (sysstr == "Windows"):
         os.remove(path)
     else:
@@ -33,7 +31,7 @@ def deleteFileInPathAndSuffix(path,suffix):
             if pycFile == suffix:
                 targetPath = os.path.join(dirpath, filename)
                 # print targetPath
-
                 # 删除文件
-
                 deleteFileWithPath(targetPath)
+                
+                
