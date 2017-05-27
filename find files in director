@@ -1,9 +1,8 @@
-import os
-
-def fun(path):
+def GetListOfPath(path):
     for root, dirs, files in os.walk(path):
-        for xn in dirs:
-            for fn in files:
-                print (root + xn + fn)
-
-fun ("C:\\")
+        for filename in files:
+            string = os.path.join(root, filename)
+            print (string)
+            
+GetListOfPath ("C:\\test1")
+GetListOfPath ("C:\\")
