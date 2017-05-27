@@ -29,6 +29,7 @@ def deleteFileInPathAndSuffix(path,suffix):
         for filename in filenames:
             nameArr = os.path.splitext(filename)
             pycFile = nameArr[1]
+            
             if pycFile == suffix:
                 targetPath = os.path.join(dirpath, filename)
                 # print targetPath
