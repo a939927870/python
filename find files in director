@@ -1,0 +1,9 @@
+import os
+
+def fun(path):
+    for root, dirs, files in os.walk(path):
+        for xn in dirs:
+            for fn in files:
+                print (root + xn + fn)
+
+fun ("C:\\")
