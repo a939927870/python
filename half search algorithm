@@ -1,0 +1,24 @@
+import os
+
+#折半查找法，python实现，注意list数组必须是有序数组
+#list成员必须有小到大，或者由大到小。这也是折半查找算法必须要求的
+
+def bin_search(data_list, val):    
+    low = 0                         # 最小数下标    
+    high = len(data_list) - 1       # 最大数下标
+    
+    while low <= high:        
+        mid = (low + high) // 2     # 中间数下标        
+        if data_list[mid] == val:   # 如果中间数下标等于val, 返回            
+            return mid        
+        elif data_list[mid] > val:  # 如果val在中间数左边, 移动high下标            
+            high = mid - 1        
+        else:                       # 如果val在中间数右边, 移动low下标            
+            low = mid + 1
+    # val不存在, 返回None
+    return    
+
+list = [1, 3, 5, 9, 12, 15, 19, 25, 29, 35, 40, 58]            
+ret = bin_search(list, 25)
+print(ret)
+
