@@ -1,0 +1,31 @@
+#MD5 把指定文件夹下所有的文件名，都加密成对应文件名的MD5名字
+
+import os
+import hashlib
+
+def md5(str):
+    m = hashlib.md5()
+    m.update(str.encode("utf8"))
+    return m.hexdigest()
+
+def GetListOfPath(path):
+    for root, dirs, files in os.walk(path):
+        for filename in files:
+            string = os.path.join(root, filename)
+
+            str = md5(filename)
+            os.rename(string, str)
+            print (string)
+
+def GetListOfPath(path):
+    for root, dirs, files in os.walk(path):
+        for filename in files:
+            str = md5(filename)
+            stringstar = os.path.join(root, filename)
+            stringend = os.path.join(root, str)
+            os.rename(stringstar, stringend)
+       #     print (string) 
+    
+GetListOfPath ("C:\\test1")
+#GetListOfPath ("C:\\")
+    
