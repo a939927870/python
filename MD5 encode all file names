@@ -15,7 +15,7 @@ def GetListOfPath(path):
             stringstar = os.path.join(root, filename)
             stringend = os.path.join(root, str)
             os.rename(stringstar, stringend)
-       #     print (string) 
+       #     print (stringend) 
     
 GetListOfPath ("C:\\test1")
 #GetListOfPath ("C:\\")
