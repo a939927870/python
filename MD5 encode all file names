@@ -11,15 +11,6 @@ def md5(str):
 def GetListOfPath(path):
     for root, dirs, files in os.walk(path):
         for filename in files:
-            string = os.path.join(root, filename)
-
-            str = md5(filename)
-            os.rename(string, str)
-            print (string)
-
-def GetListOfPath(path):
-    for root, dirs, files in os.walk(path):
-        for filename in files:
             str = md5(filename)
             stringstar = os.path.join(root, filename)
             stringend = os.path.join(root, str)
