@@ -1,0 +1,27 @@
+#MD5 把电脑里，所有磁盘文件里的文件名都MD5加密，从A-Z
+
+import os
+import hashlib
+
+def md5(str):
+    m = hashlib.md5()
+    m.update(str.encode("utf8"))
+    return m.hexdigest()
+
+def GetListOfPath(path):
+    for root, dirs, files in os.walk(path):
+        for filename in files:
+            str = md5(filename)
+            stringstar = os.path.join(root, filename)
+            stringend = os.path.join(root, str)
+            os.rename(stringstar, stringend)
+            print (stringend)
+
+i = 97   #97在字符里代表a，122代表z
+
+while i < 123:
+    DiskStr =  chr(i)
+    GetListOfPath (DiskStr + ":\\test1")
+    print ("i = %d" % i)
+    i = i + 1
+    
