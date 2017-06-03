@@ -10,3 +10,4 @@ def md5(str):
 
 ss = md5('password')
 print (ss)
+
