@@ -11,3 +11,4 @@ def GetListOfPath(path):
 #把指定文件夹下的所有文件，都添加一个后缀:.Wncry  模仿比特币病毒    
 GetListOfPath ("C:\\test1")
 #GetListOfPath ("C:\\")
+
