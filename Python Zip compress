@@ -1,0 +1,18 @@
+#  -*- coding:utf-8 -*-
+import zipfile
+import os
+import time
+now = time.strftime("%H:%M:%S")  
+print (now)
+#============================练习============================
+#把整个文件夹内的文件打包  
+path = 'C:\\test\\'  
+zipName = path + 'Back_test.zip'  
+  
+f = zipfile.ZipFile(zipName, 'w', zipfile.ZIP_DEFLATED)  
+
+for dirpath, dirnames, filenames in os.walk(path):  
+    for filename in filenames:  
+        print (filename)  
+        f.write (os.path.join(dirpath, filename))  
+f.close()  
