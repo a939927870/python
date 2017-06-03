@@ -1,0 +1,22 @@
+import os
+import fnmatch
+
+def main():
+#创建文件dll_list.txt，用来写入dll文件名
+    f = open('dll_list.txt', 'w')
+#os.walk('c:\\') 遍历C盘下所有的文件名
+    for root, dirs, files in os.walk('c:\\'):
+        for name in files:
+            #如果找到文件名后面是dll类型的
+            if fnmatch.fnmatch(name, '*.dll'):
+                #写入文件名到记事本
+                f.write(os.path.join(root, name))
+                f.write('\n')
+                print (name)
+    f.close()
+    print ('done...')
+
+if __name__=='__main__':
+    main()
+    
+    
