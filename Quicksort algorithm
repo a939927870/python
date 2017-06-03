@@ -30,3 +30,4 @@ def quickSort(L, low, high):
 if __name__ == '__main__':
     quickSort(L, 0, len(L) - 1)
     print (L)
+
