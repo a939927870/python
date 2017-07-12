@@ -1,6 +1,6 @@
 #!/usr/local/bin/python3.2
 import urllib.request,io,os,sys
-req = urllib.request.Request("http://www.google.com")
+req = urllib.request.Request("http://www.meitu.com")
 f = urllib.request.urlopen(req)
 s = f.read()
 s = s.decode('utf-8','ignore')
