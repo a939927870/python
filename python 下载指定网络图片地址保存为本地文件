@@ -1,0 +1,9 @@
+#!/usr/local/bin/python3.2
+import urllib.request,io,os,sys
+import re
+
+web = urllib.request.urlopen("http://c.pic303.com/images/2017/07/02/PHmV7.jpg")
+itdata = web.read()
+f = open('C:/'+ 'ss' +'.png', "wb")
+f.write(itdata)
+f.close()
