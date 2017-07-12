@@ -3,9 +3,10 @@ import urllib.request,io,os,sys
 import re
 
 filename = "c:\\wocao.txt"
-os.remove(filename)
+if os.path.exists('c:/wocao.txt') == True:
+    os.remove(filename)
     
-req = urllib.request.Request("http://cl.c5u.me/cl_htm4/16/1707/2478646.html")
+req = urllib.request.Request("http://cl.c5u.me/cl_htm4/16/1707/2493097.html")
 f = urllib.request.urlopen(req)
 s = f.read()
 s = s.decode('utf-8','ignore')
@@ -13,12 +14,11 @@ file = open('c:/wocao.txt','a',1,'utf-8')
 file.write(s)
 file.close()
 
-
 f = open(filename)             # 返回一个文件对象  
 line = f.readline()             # 调用文件的 readline()方法  
 while line:
     if line.find('<input src="') != -1 and line.find('" type="image" onclick=') != -1:
         print(line.split('<input src="')[-1].split('" type="image" onclick=')[0])
-    os.remove(filename)    
     line = f.readline()
 f.close()  
+os.remove(filename)    
