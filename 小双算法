@@ -15,7 +15,7 @@ while count < MaxLoop:
         Money = Money + 0
     count = count + 1
 
-print Money
+print (Money)
 
 
 
