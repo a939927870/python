@@ -1,0 +1,22 @@
+from random import randint
+MaxLoop = 100
+count = 0
+Money = 1000
+Rat = 4.2
+BuyOne = 10
+count = 0
+
+while count < MaxLoop:
+    randnum = randint(0, 27)
+    Money = Money - BuyOne
+    if randnum < 14 and randnum % 2 == 0:  
+        Money = Money + BuyOne * Rat
+    else:
+        Money = Money + 0
+    count = count + 1
+
+print Money
+
+
+
+
